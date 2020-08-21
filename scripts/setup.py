@@ -92,4 +92,4 @@ if __name__ == '__main__':
     
     # Setup postgresql db
     Setup = Setup_db(words, db_cred)
-    
+    logger.info("End setup")
