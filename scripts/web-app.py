@@ -129,9 +129,10 @@ if __name__ == '__main__':
 
     # Read data from db
     db = read_db(db_cred)
-
+    logger.info("Counted all {} rows from db".format(db.words_count))
+    
     # App web address
-    server_address = ('localhost', 8000)
+    server_address = ('', 80)
 
     logger.info("Web app will start on address {}".format(server_address))
     # Setup server and run
