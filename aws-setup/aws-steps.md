@@ -68,5 +68,8 @@
   * ![HTTP_check](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/HTTP_check.png)
   * ![HTTPS_check](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/HTTPS_check.png)
 
-18. Billing sumary
+18. Check task logs:
+  * ![Task_logs](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Task_logs.png)
+
+19. Billing sumary
   * ![Billing](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Billing.png)
