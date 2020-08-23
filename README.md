@@ -16,3 +16,12 @@ To do the setup of the database, create a script that creates a table and insert
 2. Make a Docker image with your application and the setup script
 
   * Where all requests are logged to stdout during runtime
+
+3. In AWS
+
+  * Setup a hosted database server in your VPC
+  * Upload your Docker image to ECS
+  * Setup a ECS Fargate service that runs your Docker image, where the application connects to the database server.
+  * Run the setup script as a task in ECS, and populate the database server with data.
+  * Ensure that the application is reachable over HTTP from the outside
+  * Setup a ALB in front of the server, with HTTPS
