@@ -19,7 +19,7 @@
         --enable-iam-database-authentication \
         --publicly-accessible 
     ```
-  * ![Database](/imgs/DB.png)
+  * ![Database](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/DB.png)
 
 5. Created VPC Security Groups Inbound rules to My IP
 6. Setup DB
@@ -36,10 +36,10 @@
 
   * ```$ aws ecr get-login-password | docker login -u AWS --password-stdin 283644123497.dkr.ecr.eu-west-2.amazonaws.com```
   * ```$ docker tag <img_id> <repo_addr> && docker push <repo_addr>```
-  * ![ECR](/imgs/ECR.png)
+  * ![ECR](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/ECR.png)
 
 9. Created ECS Cluster
-  * ![Cluster](/imgs/Cluster.png)
+  * ![Cluster](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Cluster.png)
   
 10. Created Task definition
 
@@ -54,19 +54,19 @@
 
   * DNS name ```web-app-lb-1617483936.eu-west-2.elb.amazonaws.com```
   * Target group with two targets IP (```172.31.11.129``` - task1 and ```172.31.14.102``` - task2)
-  * ![Targets](/imgs/Targets.png)
+  * ![Targets](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Targets.png)
   * Listener for HTTP (80)
 
 13. Registered own domain (```ondrejfuchs.cz```)
 14. Created SSL certificate by ACM
 15. Added new Listener to ELB (for 443)
 
-  * ![Listeners](/imgs/Listeners.png)
+  * ![Listeners](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Listeners.png)
 16. Created Alias by Route 53 from __web-app.ondrejfuchs.cz__ to DNS name of ELB
 17. App available on subdomain __web-app.ondrejfuchs.cz__ (80 and 443)
 
-  * ![HTTP_check](/imgs/HTTP_check.png)
-  * ![HTTPS_check](/imgs/HTTPS_check.png)
+  * ![HTTP_check](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/HTTP_check.png)
+  * ![HTTPS_check](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/HTTPS_check.png)
 
 18. Billing sumary
-  * ![Billing](/imgs/Billing.png)
+  * ![Billing](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Billing.png)
