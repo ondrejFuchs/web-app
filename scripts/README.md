@@ -23,7 +23,7 @@ File contains the 10 most common Norwegian male and 10 most common Norwegian fem
 
 ### Web-app.py
 
-The python script also reads the settings for connecting to DB from OS env. At startup, it loads the number of rows in the table __words__. Then randomly asks for a word in a given range (__<1 ; db.words_count>__). The script starts __SimpleHTTPRequestHandler__ and return string __Hello <word\_from\_db\_by\_id>__ to every request on path __"/"__.
+The python script also reads the settings for connecting to DB from OS env. At startup, it loads the number of rows in the table __words__. Then randomly asks for a word in a given range (__<1 ; db.words_count>__). The script starts __SimpleHTTPRequestHandler__ and return string __Hello <word\_from\_db\_by\_id>__ to every request on path __"/"__. Every response is also logged to command line.
 
 #### Example response for request:
   * ```Hello Thea```
