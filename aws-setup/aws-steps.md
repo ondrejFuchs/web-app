@@ -32,7 +32,7 @@
     ```
 
 7. Created namespace in ECR (also docker python3.7 and alpine)
-8. Docker login to AWS and push dockers
+8. Docker login to AWS and push dockers to ECR
 
   * ```$ aws ecr get-login-password | docker login -u AWS --password-stdin 283644123497.dkr.ecr.eu-west-2.amazonaws.com```
   * ```$ docker tag <img_id> <repo_addr> && docker push <repo_addr>```
