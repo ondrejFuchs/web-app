@@ -39,37 +39,39 @@
   * ![ECR](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/ECR.png)
 
 9. Created ECS Cluster
-  * ![Cluster](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Cluster.png)
-  
 10. Created Task definition
 
   * Task memory (MiB) 512 ; Task CPU (unit) 256, Requires compatibilities - FARGATE
   * Set Secure group with ports (Inbound) 5432, 80, 443 and Outbound (All)
-
-11. Created two running tasks from the same task definition (for load balancer)
+  * Set healthcheck of docker with curl
+  * ![Docker-HCH](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Docker-HCH.png)
+  
+11. Created two running tasks from the same task definition (for load balancer) = testing phase
 
   * Pub IP: ```35.176.73.18``` and ```3.8.23.60```
+12. Created service from definned task definition with 2 replicas = production phase
 
-12. Created ELB
+  * ![Cluster-prod](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Cluster-prod.png)
+13. Created ELB
 
   * DNS name ```web-app-lb-1617483936.eu-west-2.elb.amazonaws.com```
   * Target group with two targets IP (```172.31.11.129``` - task1 and ```172.31.14.102``` - task2)
   * ![Targets](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Targets.png)
   * Listener for HTTP (80)
 
-13. Registered own domain (```ondrejfuchs.cz```)
-14. Created SSL certificate by ACM
-15. Added new Listener to ELB (for 443)
+14. Registered own domain (```ondrejfuchs.cz```)
+15. Created SSL certificate by ACM
+16. Added new Listener to ELB (for 443)
 
   * ![Listeners](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Listeners.png)
-16. Created Alias by Route 53 from __web-app.ondrejfuchs.cz__ to DNS name of ELB
-17. App available on subdomain __web-app.ondrejfuchs.cz__ (80 and 443)
+17. Created Alias by Route 53 from __web-app.ondrejfuchs.cz__ to DNS name of ELB
+18. App available on subdomain __web-app.ondrejfuchs.cz__ (80 and 443)
 
   * ![HTTP_check](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/HTTP_check.png)
   * ![HTTPS_check](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/HTTPS_check.png)
 
-18. Check task logs:
+19. Check task logs:
   * ![Task_logs](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Task_logs.png)
 
-19. Billing sumary
+10. Billing sumary
   * ![Billing](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Billing.png)
