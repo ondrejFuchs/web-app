@@ -73,5 +73,5 @@
 19. Check task logs:
   * ![Task_logs](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Task_logs.png)
 
-10. Billing sumary
+20. Billing sumary
   * ![Billing](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Billing.png)
