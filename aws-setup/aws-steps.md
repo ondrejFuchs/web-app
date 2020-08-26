@@ -55,7 +55,7 @@
 13. Created ELB
 
   * DNS name ```web-app-lb-1617483936.eu-west-2.elb.amazonaws.com```
-  * Target group with two targets IP (```172.31.11.129``` - task1 and ```172.31.14.102``` - task2)
+  * Target group with two targets IPs
   * ![Targets](https://github.com/ondrejFuchs/web-app/blob/master/aws-setup/imgs/Targets.png)
   * Listener for HTTP (80)
 
