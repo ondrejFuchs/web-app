@@ -11,7 +11,7 @@ ADD web-app.py .
 ENV DB_HOSTNAME="sixty.c9pwzjvvfbdr.eu-west-2.rds.amazonaws.com" \
     DB_NAME="sixty_db" \
     DB_USERNAME="sixty" \
-    DB_PASSWORD="iNousONTumBr"
+    DB_PASSWORD="<To_add>"
 
 # Expose port
 EXPOSE 80
