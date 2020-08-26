@@ -31,6 +31,15 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(output.encode('utf-8'))
             # Log output also to console
             logger.info(output)
+        
+        # Set healthcheck endpoint    
+        elif self.path == '/healthcheck':
+            self.send_response(HTTPStatus.OK)
+            self.end_headers()
+            self.wfile.write(b"OK")
+        else:
+            pass
+        
 
     def log_message(self, format, *args):
         """ Func to mute request info console

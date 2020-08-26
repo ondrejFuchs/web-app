@@ -19,5 +19,8 @@ EXPOSE 80
 # Python pycopg2
 RUN pip3 install psycopg2
 
+# Install Curl for health-check
+RUN apk add curl 
+
 # Create db and insert values and run web-app
 CMD python3 setup.py && python3 web-app.py
